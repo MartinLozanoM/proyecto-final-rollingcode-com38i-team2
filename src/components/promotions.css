@@ -1,0 +1,50 @@
+.promociones-wrapper {
+  display: flex;  
+  width: 80%;
+  margin: 0 auto;
+}
+
+.promocion {
+  width: 35%;  
+  padding: 20px;    
+  margin: 0 10px;  
+  text-align: center;  
+}
+
+.info {
+  margin-top: 50px;
+}
+
+.info h3 {    
+  margin: 0;
+  font-size: 18px;
+}
+
+.info p {
+  font-size: 14px;  
+  color: #777;
+}
+
+.prev-btn, .next-btn {    
+  font-size: 24px;  
+  color: #ccc;
+  cursor: pointer;
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+  color: #000;  
+}  
+
+.prev-btn {  
+  float: left;
+}
+
+.next-btn {  
+  float: right;
+}
+
+/* Borrado el borde de las tarjetas */
+.promocion {
+  border: none;
+}
