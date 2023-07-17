@@ -1,0 +1,29 @@
+.card {
+  width: 200px;  
+  margin: 100px;
+}
+
+.card-img-top {
+  border-radius: 50%;
+  width: 100%; 
+}
+
+/* Borra el borde de la tarjeta */
+.card {
+  border: none;
+}
+
+/* Estilos para viewport mas pequeños */
+@media (max-width: 768px) {
+  .card {
+    width: 150px;
+    margin: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    width: 100px;
+    margin: 30px;  
+  }
+}
