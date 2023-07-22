@@ -1,3 +1,29 @@
+/* Navbar */
+.navbar {
+  background-color: #ff8d01;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+  text-align: center;
+}
+
+.navbar img{
+  width: 90px;
+  align-items: center;
+  margin: 0;
+}
+
+.nav_items a{
+  font-size: 20px;
+  margin: 15px;
+  color: white;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
 /* Footer */
 footer {
   width: 100%;
