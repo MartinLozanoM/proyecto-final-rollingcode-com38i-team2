@@ -1,5 +1,4 @@
-import React from "react";
-import "./card.css";
+import React from "react"; 
 
 function Card({ img }) {
   return (    

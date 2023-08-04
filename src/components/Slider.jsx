@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import "./slider.css";
 import Gato from "../assets/images/gato.jpg";
 import Pajaro from "../assets/images/pajaro.jpg";
 import Perro from "../assets/images/perro.jpg";

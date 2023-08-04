@@ -1,13 +1,11 @@
-import React, { useState } from "react";
-import "./promotions.css";
-import {
-  ArrowLeftCircleFill,
-  ArrowRightCircleFill,
-} from "react-bootstrap-icons";
+import React, { useState } from 'react';
+  import { useNavigate } from "react-router-dom";
+  import { ArrowLeftCircleFill, ArrowRightCircleFill } from 'react-bootstrap-icons';
 
-function Promotions() {
-  const [current, setCurrent] = useState(0);
-  const promociones = [
+  function Promotions() {
+    const navigate = useNavigate();  
+    const [current, setCurrent] = useState(0);  
+    const promociones = [
     {
       id: 1,
       title: "Promoción 1",
@@ -46,32 +44,31 @@ function Promotions() {
     },
   ];
 
-  function next() {
-    setCurrent(current === promociones.length - 3 ? 0 : current + 3);
+  function next() {  
+    setCurrent(current === promociones.length - 3 ? 0 : current + 3);    
   }
 
-  function prev() {
-    setCurrent(current === 0 ? promociones.length - 3 : current - 3);
+function prev() {   
+    setCurrent(current === 0 ? promociones.length - 3 : current - 3);    
   }
 
-  return (
-    <div className="promociones-wrapper">
+return (   
+    <div className="promociones-wrapper">       
       {promociones.map((promo, i) => {
-        if (i >= current && i < current + 3) {
+        if (i >= current && i < current + 3) {      
           return (
-            <div className="promocion" key={promo.id}>
-              <img src={promo.image} alt={promo.title} />
-              <div className="info">
-                <h3>{promo.title}</h3>
-                <p>{promo.description}</p>
-              </div>
-              {i === current && (
-                <ArrowLeftCircleFill className="prev-btn" onClick={prev} />
-              )}
-              {i === current + 2 && (
-                <ArrowRightCircleFill className="next-btn" onClick={next} />
-              )}
-            </div>
+            <div className="promocion" key={promo.id} 
+             onClick={() => navigate(`/promotions/${promo.id}`)}>               
+              <img src={promo.image} alt={promo.title}/>    
+               <div className="info">
+                <h3 className="h3-promotions">{promo.title}</h3>     
+                <p className="p-promotions">{promo.description}</p>
+                </div>{
+                  i === current && <ArrowLeftCircleFill className="prev-btn" onClick={prev}/>
+                  }
+                  {i === current + 2 &&<ArrowRightCircleFill className="next-btn" onClick={next}/>
+                  }         
+                </div>                
           );
         }
       })}
