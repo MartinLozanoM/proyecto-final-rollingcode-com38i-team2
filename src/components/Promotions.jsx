@@ -8,40 +8,40 @@ import React, { useState } from 'react';
     const promociones = [
     {
       id: 1,
-      title: 'Promoción 1',
-      image: '/img1.jpg',  
-      description: 'Descripción de la promoción 1.'
+      title: "Promoción 1",
+      image: "/img1.jpg",
+      description: "Descripción de la promoción 1.",
     },
     {
-        id: 2,
-        title: 'Promoción 2',
-        image: '/img1.jpg',  
-        description: 'Descripción de la promoción 1.'
-      },
-      {
-        id: 3,
-        title: 'Promoción 3',
-        image: '/img1.jpg',  
-        description: 'Descripción de la promoción 1.'
-      },
-      {
-        id: 4,
-        title: 'Promoción 4',
-        image: '/img1.jpg',  
-        description: 'Descripción de la promoción 1.'
-      },
-      {
-        id: 5,
-        title: 'Promoción 5',
-        image: '/img1.jpg',  
-        description: 'Descripción de la promoción 1.'
-      },
-      {
-        id: 6,
-        title: 'Promoción 6',
-        image: '/img1.jpg',  
-        description: 'Descripción de la promoción 1.'
-      },
+      id: 2,
+      title: "Promoción 2",
+      image: "/img1.jpg",
+      description: "Descripción de la promoción 1.",
+    },
+    {
+      id: 3,
+      title: "Promoción 3",
+      image: "/img1.jpg",
+      description: "Descripción de la promoción 1.",
+    },
+    {
+      id: 4,
+      title: "Promoción 4",
+      image: "/img1.jpg",
+      description: "Descripción de la promoción 1.",
+    },
+    {
+      id: 5,
+      title: "Promoción 5",
+      image: "/img1.jpg",
+      description: "Descripción de la promoción 1.",
+    },
+    {
+      id: 6,
+      title: "Promoción 6",
+      image: "/img1.jpg",
+      description: "Descripción de la promoción 1.",
+    },
   ];
 
   function next() {  
@@ -70,10 +70,10 @@ return (
                   }         
                 </div>                
           );
-        }   
-      })}       
-    </div>       
-  )
+        }
+      })}
+    </div>
+  );
 }
 
 export default Promotions;
