@@ -2,7 +2,9 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { Link } from "react-router-dom";
+import { FaOpencart } from "react-icons/fa";
 import Logo from "../assets/images/logo-developets.png";
+
 
 export const NavbarPractice = () => {
   return (
@@ -20,6 +22,7 @@ export const NavbarPractice = () => {
             <Link to="/products ">Productos</Link>
             <Link to="/">Sobre Nosotros</Link>
             <Link to="/products">Mi cuenta</Link>
+            <Link to="/cart"><FaOpencart className="logo-brand" /></Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

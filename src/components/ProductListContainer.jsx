@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { getData } from "../utils/functions";
 import { ProductList } from "./ProductList";
 import { API_PRACTICE } from "../utils/constants";
+import Products from "./Products";
 
 export const ProductListContainer = () => {
   const [products, setProducts] = useState([]);
