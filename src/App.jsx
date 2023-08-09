@@ -7,6 +7,7 @@ import { Footer } from "./components/Footer";
 import { ProductListContainer } from "./components/ProductListContainer";
 import Promotions from "./components/Promotions";  
 import Promotion from "./components/Promotion";
+import  Contact  from "./components/Contact"
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/promotions" element={<Promotions />}/>      
         <Route path="/promotions/:id" element={<Promotion />} />
         <Route path="/products" element={<ProductListContainer />}/>
+        <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer />      
     </>
