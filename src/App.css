@@ -1,4 +1,10 @@
 /* Navbar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .navbar {
   background-color: #20165d;
   display: flex;
@@ -98,13 +104,13 @@ footer {
 
 /* Comienzo CardCategory y Card */
 .card {
-  width: 200px;  
+  width: 200px;
   margin: 100px;
 }
 
 .card-img-top {
   border-radius: 50%;
-  width: 100%; 
+  width: 100%;
 }
 
 /* Borra el borde de la tarjeta */
@@ -123,7 +129,7 @@ footer {
 @media (max-width: 480px) {
   .card {
     width: 100px;
-    margin: 30px;  
+    margin: 30px;
   }
 }
 /* Fin CardCategory y Card */
@@ -146,13 +152,15 @@ footer {
   margin-top: 50px;
 }
 
-.info, .h3-promotions {    
+.info,
+.h3-promotions {
   margin: 0;
   font-size: 18px;
 }
 
-.info, .p-promotions {
-  font-size: 14px;  
+.info,
+.p-promotions {
+  font-size: 14px;
   color: #777;
 }
 
@@ -168,22 +176,35 @@ footer {
   margin-left: auto;
 }
 
-.prev-btn, .next-btn {    
-  font-size: 24px;  
+.arrows {
+  display: flex;      
+}  
+
+.prev {
+  margin-right: auto; 
+}
+
+.next {
+  margin-left: auto;
+}
+
+.prev-btn,
+.next-btn {
+  font-size: 24px;
   color: #ccc;
   cursor: pointer;
 }
 
 .prev-btn:hover,
 .next-btn:hover {
-  color: #000;  
-}  
+  color: #000;
+}
 
-.prev-btn {  
+.prev-btn {
   float: left;
 }
 
-.next-btn {  
+.next-btn {
   float: right;
 }
 

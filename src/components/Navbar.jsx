@@ -19,7 +19,7 @@ export const NavbarPractice = () => {
             <Link to="/">Inicio</Link>
             <Link to="/products ">Productos</Link>
             <Link to="/">Sobre Nosotros</Link>
-            <Link to="/products">Mi cuenta</Link>
+            <Link to="/login">Mi cuenta</Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
