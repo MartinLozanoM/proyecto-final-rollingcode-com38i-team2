@@ -14,26 +14,29 @@ import { TasksPage } from "./pages/TasksPage";
 import { TaskFormPage } from "./pages/TaskFormPage";
 import { ProfilePage } from "./pages/ProfilePage";
 import { ProtectedRoute } from "./ProtectedRoute";
+import { TaskProvider } from "./context/TasksContext";
 
 function App() {
   return (
     <AuthProvider>
-      <NavbarPractice />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/promotions" element={<Promotions />} />
-        <Route path="/promotions/:id" element={<Promotion />} />
-        <Route path="/products" element={<ProductListContainer />} />
-        <Route path="/login" element={<LoginPage />} />
-        <Route path="/register" element={<RegisterPage />} />
-        <Route element={<ProtectedRoute />}>
-          <Route path="/tasks" element={<TasksPage />} />
-          <Route path="/add-task" element={<TaskFormPage />} />
-          <Route path="/tasks/:id" element={<TaskFormPage />} />
-          <Route path="/profile" element={<ProfilePage />} />
-        </Route>
-      </Routes>
-      <Footer />
+      <TaskProvider>
+        <NavbarPractice />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/promotions" element={<Promotions />} />
+          <Route path="/promotions/:id" element={<Promotion />} />
+          <Route path="/products" element={<ProductListContainer />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/register" element={<RegisterPage />} />
+          <Route element={<ProtectedRoute />}>
+            <Route path="/tasks" element={<TasksPage />} />
+            <Route path="/add-task" element={<TaskFormPage />} />
+            <Route path="/tasks/:id" element={<TaskFormPage />} />
+            <Route path="/profile" element={<ProfilePage />} />
+          </Route>
+        </Routes>
+        <Footer />
+      </TaskProvider>
     </AuthProvider>
   );
 }
