@@ -1,4 +1,5 @@
 import { createContext, useState, useContext } from "react";
+import { createTaskRequest, getTasksRequest } from "../api/tasks";
 
 const TaskContext = createContext();
 
@@ -15,8 +16,19 @@ export const useTasks = () => {
 export function TaskProvider({ children }) {
   const [tasks, setTasks] = useState([]);
 
-  const createTask = (task) => {
-    console.log("task!");
+  const getTasks = async () => {
+    try {
+      const response = await getTasksRequest();
+      setTasks(response.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const createTask = async (task) => {
+    console.log("creaste task!");
+    const response = await createTaskRequest(task);
+    console.log(response);
   };
 
   return (
@@ -24,6 +36,7 @@ export function TaskProvider({ children }) {
       value={{
         tasks,
         createTask,
+        getTasks,
       }}
     >
       {children}

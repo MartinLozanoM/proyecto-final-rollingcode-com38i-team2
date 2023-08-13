@@ -13,7 +13,8 @@
   text-align: center;
 }
 
-.nav_items a {
+.nav_items a,
+.nav_items li {
   font-size: 20px;
   margin: 15px;
   color: white;
@@ -223,6 +224,7 @@ footer {
   border-radius: 0.375rem; /* 6px */
   margin-top: 0.5rem; /*8px */
   margin-bottom: 0.5rem; /*8px */
+  color: white;
 }
 
 .page-texto-rojo {

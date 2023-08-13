@@ -3,8 +3,11 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { Link } from "react-router-dom";
 import Logo from "../assets/images/logo-developets.png";
+import { useAuth } from "../context/AuthContext";
 
 export const NavbarPractice = () => {
+  const { isAuthenticated, logout, user } = useAuth();
+
   return (
     <Navbar expand="lg" className="navbar">
       <Container className="nav_items">
@@ -19,7 +22,24 @@ export const NavbarPractice = () => {
             <Link to="/">Inicio</Link>
             <Link to="/products ">Productos</Link>
             <Link to="/">Sobre Nosotros</Link>
-            <Link to="/login">Mi cuenta</Link>
+            {isAuthenticated ? (
+              <>
+                <li>Bienvenido {user.username}!</li>
+                <Link to="/add-task">Crear una nueva tarea</Link>
+                <Link
+                  to="/"
+                  onClick={() => {
+                    logout();
+                  }}
+                >
+                  Salir de mi cuenta
+                </Link>
+              </>
+            ) : (
+              <>
+                <Link to="/login">Mi cuenta</Link>
+              </>
+            )}
           </Nav>
         </Navbar.Collapse>
       </Container>

@@ -10,6 +10,7 @@ export const RegisterPage = () => {
     formState: { errors },
   } = useForm();
   const { signup, isAuthenticated, errors: registerErrors } = useAuth();
+
   const navigate = useNavigate();
 
   useEffect(() => {
