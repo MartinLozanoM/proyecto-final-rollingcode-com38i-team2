@@ -20,20 +20,27 @@ import Contact from "./components/Contact";
 function App() {
   return (
     <AuthProvider>
-      <NavbarPractice />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/promotions" element={<Promotions />} />
-        <Route path="/promotions/:id" element={<Promotion />} />
-        <Route path="/products" element={<ProductListContainer />} />
-        <Route path="/login" element={<LoginPage />} />
-        <Route path="/register" element={<RegisterPage />} />
-        <Route path="/tasks" element={<h1>tasks page</h1>} />
-        <Route path="/add-task" element={<h1>new task</h1>} />
-        <Route path="/tasks/:id" element={<h1>update task</h1>} />
-        <Route path="/profile" element={<h1>profile</h1>} />
-      </Routes>
-      <Footer />
+      <TaskProvider>
+        <main className="app-main-container">
+          <NavbarPractice />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/promotions" element={<Promotions />} />
+            <Route path="/promotions/:id" element={<Promotion />} />
+            <Route path="/products" element={<ProductListContainer />} />
+            <Route path="/login" element={<LoginPage />} />
+            <Route path="/register" element={<RegisterPage />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route element={<ProtectedRoute />}>
+              <Route path="/tasks" element={<TasksPage />} />
+              <Route path="/add-task" element={<TaskFormPage />} />
+              <Route path="/tasks/:id" element={<TaskFormPage />} />
+              <Route path="/profile" element={<ProfilePage />} />
+            </Route>
+          </Routes>
+          <Footer />
+        </main>
+      </TaskProvider>
     </AuthProvider>
   );
 }
