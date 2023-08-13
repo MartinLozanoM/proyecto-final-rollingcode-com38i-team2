@@ -136,16 +136,16 @@ footer {
 
 /* Comienzo Promotions */
 .promociones-wrapper {
-  display: flex;
-  width: 80%;
+  display: flex;  
+  width: 80%;  
   margin: 0 auto;
 }
 
 .promocion {
-  width: 35%;
-  padding: 20px;
-  margin: 0 10px;
-  text-align: center;
+  width: 35%;  
+  padding: 20px;    
+  margin: 0 10px;  
+  text-align: center; 
 }
 
 .info {
@@ -162,6 +162,30 @@ footer {
 .p-promotions {
   font-size: 14px;
   color: #777;
+}
+
+.arrows {
+  display: flex;      
+}  
+
+.prev {
+  margin-right: auto; 
+}
+
+.next {
+  margin-left: auto;
+}
+
+.arrows {
+  display: flex;      
+}  
+
+.prev {
+  margin-right: auto; 
+}
+
+.next {
+  margin-left: auto;
 }
 
 .prev-btn,
@@ -189,3 +213,36 @@ footer {
   border: none;
 }
 /* Fin Promotions */
+
+/* Comienzo Contact */
+
+.contact-form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;  
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background: #20165d;
+  color: white;
+  border: 0; 
+}
+
+.info-item {
+  display: flex;
+  align-items: center; 
+}
+
+.info-item p {
+  margin-left: 0.5cm;
+}
+
+/* Fin Contact */
