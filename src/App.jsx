@@ -20,22 +20,24 @@ function App() {
   return (
     <AuthProvider>
       <TaskProvider>
-        <NavbarPractice />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/promotions" element={<Promotions />} />
-          <Route path="/promotions/:id" element={<Promotion />} />
-          <Route path="/products" element={<ProductListContainer />} />
-          <Route path="/login" element={<LoginPage />} />
-          <Route path="/register" element={<RegisterPage />} />
-          <Route element={<ProtectedRoute />}>
-            <Route path="/tasks" element={<TasksPage />} />
-            <Route path="/add-task" element={<TaskFormPage />} />
-            <Route path="/tasks/:id" element={<TaskFormPage />} />
-            <Route path="/profile" element={<ProfilePage />} />
-          </Route>
-        </Routes>
-        <Footer />
+        <main className="app-main-container">
+          <NavbarPractice />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/promotions" element={<Promotions />} />
+            <Route path="/promotions/:id" element={<Promotion />} />
+            <Route path="/products" element={<ProductListContainer />} />
+            <Route path="/login" element={<LoginPage />} />
+            <Route path="/register" element={<RegisterPage />} />
+            <Route element={<ProtectedRoute />}>
+              <Route path="/tasks" element={<TasksPage />} />
+              <Route path="/add-task" element={<TaskFormPage />} />
+              <Route path="/tasks/:id" element={<TaskFormPage />} />
+              <Route path="/profile" element={<ProfilePage />} />
+            </Route>
+          </Routes>
+          <Footer />
+        </main>
       </TaskProvider>
     </AuthProvider>
   );
