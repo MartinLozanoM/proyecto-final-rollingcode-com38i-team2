@@ -13,10 +13,16 @@ export const TaskCard = ({ task }) => {
             onClick={() => {
               deleteTask(task._id);
             }}
+            className="bg-danger text-white p-1 mb-1 text-white fw-bold"
           >
-            Delete
+            Eliminar
           </button>
-          <Link to={`/tasks/${task._id}`}>Edit</Link>
+          <Link
+            to={`/tasks/${task._id}`}
+            className="bg-primary text-white p-1 mb-1 text-white fw-bold"
+          >
+            Editar
+          </Link>
         </div>
       </header>
       <p>{task.description}</p>

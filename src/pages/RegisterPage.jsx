@@ -31,16 +31,17 @@ export const RegisterPage = () => {
             {error}
           </div>
         ))}
+        <h1 className="page-titulo">Registrate</h1>
         <form onSubmit={onSubmit}>
           <input
             type="text"
             {...register("username", { required: true })}
             className="page-input"
-            placeholder="Username"
+            placeholder="Usuario"
           />
 
           {errors.username && (
-            <p className="page-texto-rojo">Username es requerido</p>
+            <p className="page-texto-rojo">El usuario es requerido</p>
           )}
           <input
             type="email"
@@ -49,26 +50,26 @@ export const RegisterPage = () => {
             placeholder="Email"
           />
           {errors.email && (
-            <p className="page-texto-rojo ">Email es requerido</p>
+            <p className="page-texto-rojo ">El email es requerido</p>
           )}
           <input
             type="password"
             {...register("password", { required: true })}
             className="page-input "
-            placeholder="Password"
+            placeholder="Contraseña"
           />
           {errors.password && (
-            <p className="page-texto-rojo">Password es requerido</p>
+            <p className="page-texto-rojo">La contraseña es requerida</p>
           )}
 
-          <button type="submit" className="">
+          <button type="submit" className="task-form-button">
             Registrarme
           </button>
         </form>
         <p className="page-texto-flex">
           Ya tienes una cuenta?{" "}
           <Link to="/login" className="page-texto-cielo">
-            Login
+            Iniciar sesion
           </Link>
         </p>
       </div>

@@ -19,7 +19,7 @@ export const NavbarPractice = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse className="navbar-container" id="basic-navbar-nav">
           <Nav>
-            <Link to="/">Inicio</Link>
+            <Link to={isAuthenticated ? "/tasks" : "/"}>Inicio</Link>
             <Link to="/products ">Productos</Link>
             <Link to="/">Sobre Nosotros</Link>
             {isAuthenticated ? (
