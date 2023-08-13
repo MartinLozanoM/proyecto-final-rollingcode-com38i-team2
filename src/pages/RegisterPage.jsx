@@ -23,10 +23,10 @@ export const RegisterPage = () => {
   });
 
   return (
-    <div className="flex h-[calc(100vh-100px)] items-center justify-center bg-zinc-900 text-white">
-      <div className="bg-zinc-800 max-w-md w-full p-10 rounded-md">
+    <div className="page-container-uno">
+      <div className="page-container-dos">
         {registerErrors.map((error, i) => (
-          <div className="bg-red-500 p-2" key={i}>
+          <div className="page-container-tres" key={i}>
             {error}
           </div>
         ))}
@@ -34,37 +34,39 @@ export const RegisterPage = () => {
           <input
             type="text"
             {...register("username", { required: true })}
-            className="w-full bg-zinc-700 px-4 py-2 rounded-md my-2"
+            className="page-input"
             placeholder="Username"
           />
 
           {errors.username && (
-            <p className="text-red-500">Username es requerido</p>
+            <p className="page-texto-rojo">Username es requerido</p>
           )}
           <input
             type="email"
             {...register("email", { required: true })}
-            className="w-full bg-zinc-700  px-4 py-2 rounded-md my-2"
+            className="page-input"
             placeholder="Email"
           />
-          {errors.email && <p className="text-red-500">Email es requerido</p>}
+          {errors.email && (
+            <p className="page-texto-rojo ">Email es requerido</p>
+          )}
           <input
             type="password"
             {...register("password", { required: true })}
-            className="w-full bg-zinc-700  px-4 py-2 rounded-md my-2"
+            className="page-input "
             placeholder="Password"
           />
           {errors.password && (
-            <p className="text-red-500">Password es requerido</p>
+            <p className="page-texto-rojo">Password es requerido</p>
           )}
 
           <button type="submit" className="">
             Registrarme
           </button>
         </form>
-        <p className="flex gap-x-2 justify-between">
+        <p className="page-texto-flex">
           Ya tienes una cuenta?{" "}
-          <Link to="/login" className="text-sky-500">
+          <Link to="/login" className="page-texto-cielo">
             Login
           </Link>
         </p>
