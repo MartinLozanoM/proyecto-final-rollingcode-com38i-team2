@@ -15,6 +15,7 @@ import { TaskFormPage } from "./pages/TaskFormPage";
 import { ProfilePage } from "./pages/ProfilePage";
 import { ProtectedRoute } from "./ProtectedRoute";
 import { TaskProvider } from "./context/TasksContext";
+import  Contact  from "./components/Contact"
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
             <Route path="/products" element={<ProductListContainer />} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="/register" element={<RegisterPage />} />
+              <Route path="/contact" element={<Contact />} />
             <Route element={<ProtectedRoute />}>
               <Route path="/tasks" element={<TasksPage />} />
               <Route path="/add-task" element={<TaskFormPage />} />
