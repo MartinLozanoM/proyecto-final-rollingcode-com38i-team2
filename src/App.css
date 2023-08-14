@@ -138,10 +138,7 @@ footer {
 /* Comienzo Promotions */
 .promociones-wrapper {
   display: flex;
-<<<<<<< HEAD
-=======
   flex-wrap: wrap;
->>>>>>> 4da07d1300b71663b0eb834b7424fb8f0059f739
   width: 80%;
   margin: 0 auto;
 }
