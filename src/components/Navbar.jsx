@@ -21,6 +21,7 @@ export const NavbarPractice = () => {
           <Nav>
             <Link to={isAuthenticated ? "/tasks" : "/"}>Inicio</Link>
             <Link to="/products ">Productos</Link>
+            <Link to="/aboutus">Sobre Nosotros</Link>
             <Link to="/">Sobre Nosotros</Link>
             {isAuthenticated ? (
               <>
