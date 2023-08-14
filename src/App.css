@@ -137,16 +137,17 @@ footer {
 
 /* Comienzo Promotions */
 .promociones-wrapper {
-  display: flex;  
-  width: 80%;  
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
   margin: 0 auto;
 }
 
 .promocion {
-  width: 35%;  
-  padding: 20px;    
-  margin: 0 10px;  
-  text-align: center; 
+  width: 35%;
+  padding: 20px;
+  margin: 0 10px;
+  text-align: center;
 }
 
 .info {
@@ -166,11 +167,11 @@ footer {
 }
 
 .arrows {
-  display: flex;      
-}  
+  display: flex;
+}
 
 .prev {
-  margin-right: auto; 
+  margin-right: auto;
 }
 
 .next {
@@ -178,11 +179,11 @@ footer {
 }
 
 .arrows {
-  display: flex;      
-}  
+  display: flex;
+}
 
 .prev {
-  margin-right: auto; 
+  margin-right: auto;
 }
 
 .next {
@@ -215,21 +216,23 @@ footer {
 }
 /* Fin Promotions */
 /* About Us */
-:root{
-  --light: #E2E2E2;
+:root {
+  --light: #e2e2e2;
   --primary: rgb(9, 9, 71);
   --secondary: rgb(70, 70, 55);
 }
-*, *::after, *::before {
+*,
+*::after,
+*::before {
   padding: 0;
   margin: 0;
 }
 
-body{
+body {
   background-color: var(--light);
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-img{
+img {
   width: 100%;
   display: block;
 }
@@ -238,35 +241,35 @@ h1 {
   text-align: center;
   text-transform: uppercase;
 }
-.contenedor{
+.contenedor {
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
 }
-.card-header{
+.card-header {
   height: 200px;
   width: 100%;
   object-position: 50% 50%;
   object-fit: cover;
 }
-.card-title{
+.card-title {
   text-align: center;
   margin: 0;
 }
-.card-description{
+.card-description {
   flex-grow: 1;
 }
-.card-header img{
+.card-header img {
   border-radius: 10px 10px 0 0;
 }
-.card-body{
+.card-body {
   border-radius: 0 0 10px 10px;
   background-color: #fff;
   padding: 20px 15px;
   text-align: justify;
   border: 1px solid #ccc;
 }
-.btn{
+.btn {
   display: block;
   background-color: var(--secondary);
   padding: 5px;
@@ -275,20 +278,20 @@ h1 {
   text-align: center;
   margin-top: 10px;
 }
-@media(min-width: 480px){
-  .contenedor{
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap:  10px;
+@media (min-width: 480px) {
+  .contenedor {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
   }
-  .card{
-      display: flex;
-      flex-direction: column;
+  .card {
+    display: flex;
+    flex-direction: column;
   }
-  .card-body{
-      flex-grow: 1;
-      display: flex;
-      flex-direction: column;
+  .card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
   }
 }
 
@@ -300,24 +303,25 @@ h1 {
   margin: 0 auto;
 }
 
-input, textarea {
+input,
+textarea {
   width: 100%;
-  padding: 10px;  
+  padding: 10px;
   margin-bottom: 20px;
   box-sizing: border-box;
 }
 
-button {
+.contact-button-form {
   width: 100%;
   padding: 10px;
   background: #20165d;
   color: white;
-  border: 0; 
+  border: 0;
 }
 
 .info-item {
   display: flex;
-  align-items: center; 
+  align-items: center;
 }
 
 .info-item p {
@@ -427,11 +431,14 @@ button {
   font-weight: 700;
 }
 /* Comienzo Map */
-.map { 
+.map {
   width: 100%;
-   height: 250px; 
-   margin-top: 20px;
-  border: none; }
-  
-  .map { display: block;
-  margin: 0 auto; }
+  height: 250px;
+  margin-top: 20px;
+  border: none;
+}
+
+.map {
+  display: block;
+  margin: 0 auto;
+}
