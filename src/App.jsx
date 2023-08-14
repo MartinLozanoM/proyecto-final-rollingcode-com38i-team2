@@ -16,36 +16,12 @@ import { ProfilePage } from "./pages/ProfilePage";
 import { ProtectedRoute } from "./ProtectedRoute";
 import { TaskProvider } from "./context/TasksContext";
 import Contact from "./components/Contact";
-<<<<<<< HEAD
-=======
 import AboutUs from "./components/AboutUs";
->>>>>>> 4da07d1300b71663b0eb834b7424fb8f0059f739
 
 function App() {
   return (
     <AuthProvider>
       <TaskProvider>
-<<<<<<< HEAD
-        <main className="app-main-container">
-          <NavbarPractice />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/promotions" element={<Promotions />} />
-            <Route path="/promotions/:id" element={<Promotion />} />
-            <Route path="/products" element={<ProductListContainer />} />
-            <Route path="/login" element={<LoginPage />} />
-            <Route path="/register" element={<RegisterPage />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route element={<ProtectedRoute />}>
-              <Route path="/tasks" element={<TasksPage />} />
-              <Route path="/add-task" element={<TaskFormPage />} />
-              <Route path="/tasks/:id" element={<TaskFormPage />} />
-              <Route path="/profile" element={<ProfilePage />} />
-            </Route>
-          </Routes>
-          <Footer />
-        </main>
-=======
         <NavbarPractice />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -64,7 +40,6 @@ function App() {
           </Route>
         </Routes>
         <Footer />
->>>>>>> 4da07d1300b71663b0eb834b7424fb8f0059f739
       </TaskProvider>
     </AuthProvider>
   );
