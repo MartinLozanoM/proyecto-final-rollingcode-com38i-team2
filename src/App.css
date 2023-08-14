@@ -213,6 +213,7 @@ footer {
 /* Borrado el borde de las tarjetas */
 .promocion {
   border: none;
+  width: 100%;
 }
 /* Fin Promotions */
 /* About Us */
@@ -344,7 +345,7 @@ textarea {
   box-sizing: border-box;
 }
 
-button {
+.contact-button-form {
   width: 100%;
   padding: 10px;
   background: #20165d;

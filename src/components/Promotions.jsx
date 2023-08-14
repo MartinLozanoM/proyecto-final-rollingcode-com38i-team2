@@ -1,15 +1,17 @@
-import React, { useState, useEffect } from 'react';
-  import { useNavigate } from "react-router-dom";
-  import { ArrowLeftCircleFill, ArrowRightCircleFill } from 'react-bootstrap-icons';
+import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import {
+  ArrowLeftCircleFill,
+  ArrowRightCircleFill,
+} from "react-bootstrap-icons";
+import Image from "../assets/images/img1.jpg";
 
+const Promotions = () => {
+  const navigate = useNavigate();
 
-    const Promotions = () => {
+  const [current, setCurrent] = useState(0);
 
-    const navigate = useNavigate();
-
-    const [current, setCurrent] = useState(0);
-
-    const promotions = [
+  const promotions = [
     {
       id: 1,
       title: "Promoción 1",
@@ -48,39 +50,41 @@ import React, { useState, useEffect } from 'react';
     },
   ];
 
-  useEffect(() => {   
-   }, [current]);    
+  useEffect(() => {}, [current]);
 
-   const next = () => {    
-     setCurrent((current + 1) % promotions.length);    
-   };
+  const next = () => {
+    setCurrent((current + 1) % promotions.length);
+  };
 
-   const prev = () => {
-     setCurrent((current - 1 + promotions.length) % promotions.length);   
-   };
+  const prev = () => {
+    setCurrent((current - 1 + promotions.length) % promotions.length);
+  };
 
-   return (     
+  return (
     <div className="promociones-wrapper">
-    <ArrowLeftCircleFill className="prev-btn" onClick={prev}/>        
+      <ArrowLeftCircleFill className="prev-btn" onClick={prev} />
       {promotions.map((promo, i) => {
-        if(i >= current && i < current + 3){
-          return (  
-           <div className="promocion" key={promo.id}>
-             <img src={promo.image} alt={promo.title}/>   
-             <h3 className="h3-promotions">{promo.title}</h3>
-             <p className="p-promotions">{promo.description}</p>
-             <button onClick={() => navigate(`/promotions/${promo.id}`)}>
-               Ver promoción
-             </button>
-           </div>
+        if (i >= current && i < current + 3) {
+          return (
+            <div className="promocion" key={promo.id}>
+              <img src={Image} alt={promo.title} />
+              <h3 className="h3-promotions">{promo.title}</h3>
+              <p className="p-promotions">{promo.description}</p>
+              <button
+                onClick={() => navigate(`/promotions/${promo.id}`)}
+                className="contact-button-form"
+              >
+                Ver promoción
+              </button>
+            </div>
           );
-        }   
-      })}      
-      <div className="arrows">   
-        <ArrowRightCircleFill className="next-btn" onClick={next}/>   
-      </div>       
-    </div>     
-  );  
-  }
+        }
+      })}
+      <div className="arrows">
+        <ArrowRightCircleFill className="next-btn" onClick={next} />
+      </div>
+    </div>
+  );
+};
 
-  export default Promotions;
+export default Promotions;
