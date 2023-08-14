@@ -1,11 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
   import { useNavigate } from "react-router-dom";
   import { ArrowLeftCircleFill, ArrowRightCircleFill } from 'react-bootstrap-icons';
 
-  function Promotions() {
-    const navigate = useNavigate();  
-    const [current, setCurrent] = useState(0);  
-    const promociones = [
+
+    const Promotions = () => {
+
+    const navigate = useNavigate();
+
+    const [current, setCurrent] = useState(0);
+
+    const promotions = [
     {
       id: 1,
       title: "Promoción 1",
@@ -44,36 +48,39 @@ import React, { useState } from 'react';
     },
   ];
 
-  function next() {  
-    setCurrent(current === promociones.length - 3 ? 0 : current + 3);    
-  }
+  useEffect(() => {   
+   }, [current]);    
 
-function prev() {   
-    setCurrent(current === 0 ? promociones.length - 3 : current - 3);    
-  }
+   const next = () => {    
+     setCurrent((current + 1) % promotions.length);    
+   };
 
-return (   
-    <div className="promociones-wrapper">       
-      {promociones.map((promo, i) => {
-        if (i >= current && i < current + 3) {      
-          return (
-            <div className="promocion" key={promo.id} 
-             onClick={() => navigate(`/promotions/${promo.id}`)}>               
-              <img src={promo.image} alt={promo.title}/>    
-               <div className="info">
-                <h3 className="h3-promotions">{promo.title}</h3>     
-                <p className="p-promotions">{promo.description}</p>
-                </div>{
-                  i === current && <ArrowLeftCircleFill className="prev-btn" onClick={prev}/>
-                  }
-                  {i === current + 2 &&<ArrowRightCircleFill className="next-btn" onClick={next}/>
-                  }         
-                </div>                
+   const prev = () => {
+     setCurrent((current - 1 + promotions.length) % promotions.length);   
+   };
+
+   return (     
+    <div className="promociones-wrapper">
+    <ArrowLeftCircleFill className="prev-btn" onClick={prev}/>        
+      {promotions.map((promo, i) => {
+        if(i >= current && i < current + 3){
+          return (  
+           <div className="promocion" key={promo.id}>
+             <img src={promo.image} alt={promo.title}/>   
+             <h3 className="h3-promotions">{promo.title}</h3>
+             <p className="p-promotions">{promo.description}</p>
+             <button onClick={() => navigate(`/promotions/${promo.id}`)}>
+               Ver promoción
+             </button>
+           </div>
           );
-        }
-      })}
-    </div>
-  );
-}
+        }   
+      })}      
+      <div className="arrows">   
+        <ArrowRightCircleFill className="next-btn" onClick={next}/>   
+      </div>       
+    </div>     
+  );  
+  }
 
-export default Promotions;
+  export default Promotions;
