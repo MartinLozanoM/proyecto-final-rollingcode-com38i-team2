@@ -18,7 +18,7 @@ export const NavbarPractice = () => {
           <Nav>
             <Link to="/">Inicio</Link>
             <Link to="/products ">Productos</Link>
-            <Link to="/">Sobre Nosotros</Link>
+            <Link to="/aboutus">Sobre Nosotros</Link>
             <Link to="/login">Mi cuenta</Link>
           </Nav>
         </Navbar.Collapse>

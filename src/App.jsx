@@ -10,6 +10,8 @@ import Promotion from "./components/Promotion";
 import { RegisterPage } from "./pages/RegisterPage.jsx";
 import { LoginPage } from "./pages/LoginPage.jsx";
 import { AuthProvider } from "./context/AuthContext";
+import AboutUs from "./components/AboutUs";
+
 
 function App() {
   return (
@@ -26,6 +28,7 @@ function App() {
         <Route path="/add-task" element={<h1>new task</h1>} />
         <Route path="/tasks/:id" element={<h1>update task</h1>} />
         <Route path="/profile" element={<h1>profile</h1>} />
+        <Route path="/aboutus" element={<AboutUs />} />
       </Routes>
       <Footer />
     </AuthProvider>
