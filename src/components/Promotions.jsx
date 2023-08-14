@@ -60,7 +60,8 @@ import React, { useState, useEffect } from 'react';
    };
 
    return (     
-    <div className="promociones-wrapper">        
+    <div className="promociones-wrapper">
+    <ArrowLeftCircleFill className="prev-btn" onClick={prev}/>        
       {promotions.map((promo, i) => {
         if(i >= current && i < current + 3){
           return (  
@@ -75,8 +76,7 @@ import React, { useState, useEffect } from 'react';
           );
         }   
       })}      
-      <div className="arrows">
-        <ArrowLeftCircleFill className="prev-btn" onClick={prev}/>   
+      <div className="arrows">   
         <ArrowRightCircleFill className="next-btn" onClick={next}/>   
       </div>       
     </div>     
