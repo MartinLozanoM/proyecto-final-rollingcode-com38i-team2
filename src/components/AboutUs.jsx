@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { MEMBERS_DATA } from "../utils/memberData"; 
+import { MEMBERS_DATA } from "../utils/memberData";
 import { getData } from "../utils/functions";
 
 const AboutUs = () => {

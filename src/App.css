@@ -213,6 +213,7 @@ footer {
 /* Borrado el borde de las tarjetas */
 .promocion {
   border: none;
+  width: 100%;
 }
 /* Fin Promotions */
 /* About Us */
@@ -329,6 +330,40 @@ textarea {
 }
 
 /* Fin Contact */
+/* Comienzo Contact */
+
+.contact-form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+
+.contact-button-form {
+  width: 100%;
+  padding: 10px;
+  background: #20165d;
+  color: white;
+  border: 0;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+}
+
+.info-item p {
+  margin-left: 0.5cm;
+}
+
+/* Fin Contact */
+
 /* Login y register */
 .page-container-uno {
   display: flex;
