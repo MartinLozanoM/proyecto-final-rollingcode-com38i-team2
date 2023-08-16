@@ -20,7 +20,7 @@ export const NavbarPractice = () => {
         <Navbar.Collapse className="navbar-container" id="basic-navbar-nav">
           <Nav>
             <Link to={isAuthenticated ? "/tasks" : "/"}>Inicio</Link>
-            <Link to="/products ">Productos</Link>
+            <Link to="/products">Productos</Link>
             <Link to="/aboutus">Sobre Nosotros</Link>
             <Link to="/contact">Contacto</Link>
             {isAuthenticated ? (
