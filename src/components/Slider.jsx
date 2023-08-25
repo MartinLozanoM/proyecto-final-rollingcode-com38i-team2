@@ -22,8 +22,8 @@ function Slider() {
   }, [activeSlide]);
 
   return (
-    <div className="slider">
-      <img src={images[activeSlide]} alt="" />
+    <div className="w-100 slider">
+      <img src={images[activeSlide]} alt="Slider images" />
     </div>
   );
 }
