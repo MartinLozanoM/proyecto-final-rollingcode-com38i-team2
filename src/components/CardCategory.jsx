@@ -26,24 +26,32 @@ function CardCategory() {
     // </div>
     <div className="container d-flex flex-wrap justify-content-evenly align-items-center gap-3">
       <div className="animal-icon-container">
-        <Link>
-          <img src={Perro} alt="Perro" />
-        </Link>
+        <div className="animal-icon">
+          <Link>
+            <img src={Perro} alt="Perro" />
+          </Link>
+        </div>
       </div>
       <div className="animal-icon-container">
-        <Link>
-          <img src={Gato} alt="Gato" />
-        </Link>
+        <div className="animal-icon">
+          <Link>
+            <img src={Gato} alt="Gato" />
+          </Link>
+        </div>
       </div>
       <div className="animal-icon-container">
-        <Link>
-          <img src={Pez} alt="Pez" />
-        </Link>
+        <div className="animal-icon">
+          <Link>
+            <img src={Pez} alt="Pez" />
+          </Link>
+        </div>
       </div>
       <div className="animal-icon-container">
-        <Link>
-          <img src={Pajaro} alt="Pajaro" />
-        </Link>
+        <div className="animal-icon">
+          <Link>
+            <img src={Pajaro} alt="Pajaro" />
+          </Link>
+        </div>
       </div>
     </div>
   );

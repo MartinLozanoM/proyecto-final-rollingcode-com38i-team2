@@ -88,15 +88,19 @@ footer li a {
 /* Fin Slider */
 
 /* Comienzo CardCategory y Card */
+.home-container {
+  margin-bottom: 30px;
+}
+
 .animal-icon-container {
+  margin-bottom: 1.5rem;
+}
+
+.animal-icon {
   width: 100px;
   height: 100px;
   border-radius: 50%;
   background-color: #28bed1;
-}
-
-.animal-icon {
-  font-size: 50px;
 }
 
 .card {
@@ -131,17 +135,9 @@ footer li a {
 /* Fin CardCategory y Card */
 
 /* Comienzo Promotions */
-.promociones-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  width: 80%;
-  margin: 0 auto;
-}
 
 .promocion {
-  width: 35%;
   padding: 20px;
-  margin: 0 10px;
   text-align: center;
 }
 
@@ -173,11 +169,10 @@ footer li a {
   color: #000;
 }
 
-/* Borrado el borde de las tarjetas */
-.promocion {
-  border: none;
-  width: 100%;
+.arrow-container {
+  padding: 10px;
 }
+
 /* Fin Promotions */
 /* About Us */
 :root {

@@ -4,7 +4,7 @@ import Promotions from "./Promotions";
 
 export const Home = () => {
   return (
-    <main>
+    <main className="home-container">
       <Slider />
       <div className="my-4">
         <CardCategory />

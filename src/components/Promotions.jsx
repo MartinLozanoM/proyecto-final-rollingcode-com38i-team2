@@ -79,12 +79,14 @@ const Promotions = () => {
           );
         }
       })}
-      <div className="d-flex flex-row justify-content-evenly">
-        <div>
-          <ArrowLeftCircleFill className="prev-btn" onClick={prev} />
-        </div>
-        <div>
-          <ArrowRightCircleFill className="next-btn" onClick={next} />
+      <div className="container">
+        <div className="d-flex justify-content-center">
+          <div className="arrow-container">
+            <ArrowLeftCircleFill className="prev-btn" onClick={prev} />
+          </div>
+          <div className="arrow-container">
+            <ArrowRightCircleFill className="next-btn" onClick={next} />
+          </div>
         </div>
       </div>
     </div>
