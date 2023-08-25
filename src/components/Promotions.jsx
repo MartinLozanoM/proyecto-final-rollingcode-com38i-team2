@@ -62,9 +62,8 @@ const Promotions = () => {
 
   return (
     <div className="promociones-wrapper">
-      <ArrowLeftCircleFill className="prev-btn" onClick={prev} />
       {promotions.map((promo, i) => {
-        if (i >= current && i < current + 3) {
+        if (i >= current && i < current + 1) {
           return (
             <div className="promocion" key={promo.id}>
               <img src={Image} alt={promo.title} />
@@ -80,8 +79,15 @@ const Promotions = () => {
           );
         }
       })}
-      <div className="arrows">
-        <ArrowRightCircleFill className="next-btn" onClick={next} />
+      <div className="container">
+        <div className="d-flex justify-content-center">
+          <div className="arrow-container">
+            <ArrowLeftCircleFill className="prev-btn" onClick={prev} />
+          </div>
+          <div className="arrow-container">
+            <ArrowRightCircleFill className="next-btn" onClick={next} />
+          </div>
+        </div>
       </div>
     </div>
   );

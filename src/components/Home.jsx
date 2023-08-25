@@ -4,13 +4,12 @@ import Promotions from "./Promotions";
 
 export const Home = () => {
   return (
-    <main>
-    <h1>Pet Shop</h1>
-      <Slider/>
-      <div>
-        <CardCategory /> 
-      </div>  
-      <Promotions/>
+    <main className="home-container">
+      <Slider />
+      <div className="my-4">
+        <CardCategory />
+      </div>
+      <Promotions />
     </main>
   );
 };
