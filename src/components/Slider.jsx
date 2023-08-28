@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-import Gato from "../assets/images/gato.jpg";
-import Pajaro from "../assets/images/pajaro.jpg";
-import Perro from "../assets/images/perro.jpg";
+import Slider1 from "../assets/images/sld1.png";  
+import Slider2 from "../assets/images/sld2.png"; 
+import Slider3 from "../assets/images/sld3.jpg";
 
-const images = [Gato, Pajaro, Perro];
+const images = [Slider1, Slider2, Slider3];
 
 function Slider() {
   const [activeSlide, setActiveSlide] = useState(0);
@@ -13,17 +13,20 @@ function Slider() {
       setActiveSlide((prevActiveSlide) => {
         if (prevActiveSlide === images.length - 1) {
           return 0;
-        } else {
+        } else {  
           return prevActiveSlide + 1;
         }
-      });
+      });  
     }, 2000);
-    return () => clearInterval(interval);
+    return () => clearInterval(interval);    
   }, [activeSlide]);
 
-  return (
-    <div className="w-100 slider">
-      <img src={images[activeSlide]} alt="Slider images" />
+  return (    
+    <div className="slider">      
+      <img 
+        src={images[activeSlide]} 
+        alt="Slider images" 
+      />      
     </div>
   );
 }
